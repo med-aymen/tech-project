@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les matériaux composites et minéraux, leurs propriétés, applications et importance dans l'ingénierie moderne. Guide complet sur la science des matériaux.">
+    <meta name="keywords" content="matériaux composites, matériaux minéraux, science des matériaux, ingénierie, céramiques, fibres de carbone">
+    <meta name="author" content="Med Aymen Trousi, Yosr Hadj Kacem, Mohamed Ammous, Noue El Islam Sallem, Med Aziz Mbarki, Med Hedi Hadji">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Les Matériaux Composites et les Matériaux Minéraux">
+    <meta property="og:description" content="Exploration complète des matériaux composites et minéraux dans l'ingénierie moderne">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/1a2332/ffffff?text=Mat%C3%A9riaux+Composites">
+    
+    <title>Les Matériaux Composites et les Matériaux Minéraux | Science des Matériaux</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ================================
+           CSS Variables & Reset
+           ================================ */
+        :root {
+            --primary-dark: #1a2332;
+            --primary-blue: #2c4a6f;
+            --accent-teal: #3ba99c;
+            --accent-copper: #d4745f;
+            --light-gray: #f5f7fa;
+            --medium-gray: #8b95a5;
+            --white: #ffffff;
+            --text-dark: #2d3748;
+            --shadow-sm: 0 2px 8px rgba(26, 35, 50, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 35, 50, 0.12);
+            --shadow-lg: 0 8px 40px rgba(26, 35, 50, 0.16);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+        
+        /* ================================
+           Typography
+           ================================ */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary-dark);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        /* ================================
+           Navigation
+           ================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 35, 50, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-logo i {
+            color: var(--accent-teal);
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-teal);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* ================================
+           Hero Section
+           ================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(59, 169, 156, 0.05) 35px, rgba(59, 169, 156, 0.05) 70px),
+                repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(212, 116, 95, 0.05) 35px, rgba(212, 116, 95, 0.05) 70px);
+            animation: patternMove 30s linear infinite;
+        }
+        
+        @keyframes patternMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(70px, 70px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            gap: 1rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: var(--accent-teal);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(59, 169, 156, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(59, 169, 156, 0.6);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+        
+        .scroll-indicator i {
+            font-size: 2rem;
+            color: var(--white);
+            opacity: 0.7;
+        }
+        
+        /* ================================
+           Section Styling
+           ================================ */
+        section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-copper));
+            border-radius: 2px;
+        }
+        
+        .section-description {
+            max-width: 800px;
+            margin: 2rem auto 0;
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+        }
+        
+        /* ================================
+           Introduction Section
+           ================================ */
+        .intro-section {
+            background: var(--light-gray);
+        }
+        
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .intro-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .intro-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-copper));
+        }
+        
+        .intro-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .intro-card i {
+            font-size: 3rem;
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            margin-top: 0.5rem;
+        }
+        
+        /* ================================
+           Composites Section
+           ================================ */
+        .composites-section {
+            background: var(--white);
+        }
+        
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab-button {
+            padding: 0.8rem 1.5rem;
+            background: var(--light-gray);
+            border: 2px solid transparent;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+        
+        .tab-button.active {
+            background: var(--accent-teal);
+            color: var(--white);
+            border-color: var(--accent-teal);
+        }
+        
+        .tab-button:hover:not(.active) {
+            background: var(--white);
+            border-color: var(--accent-teal);
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .material-card {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .material-card:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-teal);
+        }
+        
+        .material-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .material-card i {
+            color: var(--accent-teal);
+        }
+        
+        .material-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .material-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .material-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+        
+        /* ================================
+           Accordion
+           ================================ */
+        .accordion {
+            margin-top: 3rem;
+        }
+        
+        .accordion-item {
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid var(--light-gray);
+            transition: var(--transition);
+        }
+        
+        .accordion-item:hover {
+            border-color: var(--accent-teal);
+        }
+        
+        .accordion-header {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--light-gray);
+            transition: var(--transition);
+        }
+        
+        .accordion-header:hover {
+            background: rgba(59, 169, 156, 0.1);
+        }
+        
+        .accordion-header h4 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .accordion-icon {
+            font-size: 1.5rem;
+            color: var(--accent-teal);
+            transition: var(--transition);
+        }
+        
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        
+        .accordion-body {
+            padding: 2rem;
+        }
+        
+        /* ================================
+           Mineral Materials Section
+           ================================ */
+        .minerals-section {
+            background: linear-gradient(135deg, var(--light-gray) 0%, rgba(59, 169, 156, 0.05) 100%);
+        }
+        
+        .comparison-table {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-top: 3rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            color: var(--white);
+        }
+        
+        th {
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        tbody tr {
+            transition: var(--transition);
+        }
+        
+        tbody tr:nth-child(even) {
+            background: var(--light-gray);
+        }
+        
+        tbody tr:hover {
+            background: rgba(59, 169, 156, 0.1);
+            transform: scale(1.01);
+        }
+        
+        td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        
+        /* ================================
+           Comparison Section
+           ================================ */
+        .comparison-section {
+            background: var(--white);
+        }
+        
+        .comparison-slider-container {
+            position: relative;
+            max-width: 900px;
+            margin: 3rem auto;
+            background: var(--light-gray);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .comparison-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .comparison-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .comparison-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .comparison-card h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .comparison-card.composites h4 {
+            color: var(--accent-teal);
+        }
+        
+        .comparison-card.minerals h4 {
+            color: var(--accent-copper);
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-item i {
+            color: var(--accent-teal);
+        }
+        
+        .minerals .feature-item i {
+            color: var(--accent-copper);
+        }
+        
+        /* ================================
+           Gallery Section
+           ================================ */
+        .gallery-section {
+            background: linear-gradient(180deg, var(--light-gray) 0%, var(--white) 100%);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 35, 50, 0.95), transparent);
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay h4 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-overlay p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+        
+        /* Placeholder image styling */
+        .gallery-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* ================================
+           Footer
+           ================================ */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-teal);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-links i {
+            color: var(--accent-teal);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--accent-teal);
+            transform: translateY(-3px);
+        }
+        
+        .team-members {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .team-member {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .team-member i {
+            color: var(--accent-teal);
+            font-size: 0.8rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ================================
+           Back to Top Button
+           ================================ */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-teal);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+        
+        /* ================================
+           Loading Animation
+           ================================ */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--accent-teal);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* ================================
+           Scroll Animations
+           ================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ================================
+           Responsive Design
+           ================================ */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(26, 35, 50, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+                transition: left 0.4s ease-out;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .comparison-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs-container {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding-bottom: 0.5rem;
+            }
+            
+            .comparison-slider-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+            }
+            
+            .material-card,
+            .intro-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* ================================
+           Print Styles
+           ================================ */
+        @media print {
+            .navbar,
+            .scroll-indicator,
+            .back-to-top,
+            .loading-screen {
+                display: none;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-atom"></i>
+                <span>MatériauX</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#composites" class="nav-link">Composites</a></li>
+                <li><a href="#mineraux" class="nav-link">Minéraux</a></li>
+                <li><a href="#comparaison" class="nav-link">Comparaison</a></li>
+                <li><a href="#galerie" class="nav-link">Galerie</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Les Matériaux Composites et les Matériaux Minéraux</h1>
+            <p class="hero-subtitle">
+                Découvrez l'univers fascinant des matériaux avancés qui façonnent notre monde moderne. 
+                De l'aérospatiale à la construction, explorez les propriétés remarquables et les applications 
+                innovantes des matériaux composites et minéraux.
+            </p>
+            <div class="hero-cta">
+                <a href="#introduction" class="btn btn-primary">
+                    <span>Explorer</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#comparaison" class="btn btn-outline">
+                    <span>Comparaison</span>
+                    <i class="fas fa-balance-scale"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- Introduction Section -->
+    <section class="intro-section" id="introduction">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Introduction à la Science des Matériaux</h2>
+                <p class="section-description">
+                    La science des matériaux est au cœur de l'innovation technologique moderne. 
+                    Les matériaux composites et minéraux représentent deux catégories fondamentales 
+                    qui transforment les industries à travers le monde.
+                </p>
+            </div>
+            
+            <div class="intro-grid">
+                <div class="intro-card fade-in">
+                    <i class="fas fa-industry"></i>
+                    <h3>Impact Industriel</h3>
+                    <p>Les matériaux avancés sont essentiels dans l'aérospatiale, l'automobile, la construction et l'électronique. Ils permettent des conceptions plus légères, plus résistantes et plus durables.</p>
+                </div>
+                
+                <div class="intro-card fade-in">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Durabilité</h3>
+                    <p>Les nouveaux matériaux contribuent à réduire l'empreinte environnementale grâce à leur efficacité énergétique, leur longévité accrue et leurs processus de fabrication optimisés.</p>
+                </div>
+                
+                <div class="intro-card fade-in">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation Continue</h3>
+                    <p>La recherche constante dans le domaine des matériaux ouvre de nouvelles possibilités pour résoudre les défis technologiques et environnementaux de notre époque.</p>
+                </div>
+            </div>
+            
+            <div class="intro-grid" style="margin-top: 2rem;">
+                <div class="intro-card fade-in">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-label">Réduction de poids dans l'aérospatiale</div>
+                </div>
+                
+                <div class="intro-card fade-in">
+                    <div class="stat-number">2000°C</div>
+                    <div class="stat-label">Résistance thermique des céramiques</div>
+                </div>
+                
+                <div class="intro-card fade-in">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Années de durabilité du béton renforcé</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Composites Section -->
+    <section class="composites-section" id="composites">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Les Matériaux Composites</h2>
+                <p class="section-description">
+                    Les matériaux composites sont constitués de deux ou plusieurs matériaux différents 
+                    combinés pour créer des propriétés supérieures à celles des composants individuels.
+                </p>
+            </div>
+            
+            <div class="tabs-container fade-in">
+                <button class="tab-button active" data-tab="types">Types de Composites</button>
+                <button class="tab-button" data-tab="proprietes">Propriétés</button>
+                <button class="tab-button" data-tab="applications">Applications</button>
+                <button class="tab-button" data-tab="avantages">Avantages & Limites</button>
+            </div>
+            
+            <div class="tab-content active" id="types">
+                <div class="content-grid">
+                    <div class="material-card fade-in">
+                        <h4><i class="fas fa-layer-group"></i> Fibres de Verre</h4>
+                        <p>Composite le plus utilisé, combinant des fibres de verre avec une matrice de résine polymère.</p>
+                        <ul>
+                            <li>Excellente résistance mécanique</li>
+                            <li>Faible coût de production</li>
+                            <li>Bonne isolation électrique</li>
+                            <li>Résistance à la corrosion</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="material-card fade-in">
+                        <h4><i class="fas fa-wind"></i> Fibres de Carbone</h4>
+                        <p>Matériau haute performance offrant un rapport résistance/poids exceptionnel.</p>
+                        <ul>
+                            <li>Légèreté exceptionnelle</li>
+                            <li>Rigidité élevée</li>
+                            <li>Résistance à la fatigue</li>
+                            <li>Conductivité thermique</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="material-card fade-in">
+                        <h4><i class="fas fa-shield-alt"></i> Fibres d'Aramide</h4>
+                        <p>Connues sous le nom commercial Kevlar, ces fibres offrent une résistance remarquable aux impacts.</p>
+                        <ul>
+                            <li>Résistance balistique</li>
+                            <li>Absorption des chocs</li>
+                            <li>Résistance aux coupures</li>
+                            <li>Stabilité thermique</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="material-card fade-in">
+                        <h4><i class="fas fa-cube"></i> Matrice Polymère</h4>
+                        <p>Résines thermodurcissables ou thermoplastiques qui lient les fibres de renforcement.</p>
+                        <ul>
+                            <li>Époxydes pour haute performance</li>
+                            <li>Polyesters pour applications courantes</li>
+                            <li>Vinylesters pour résistance chimique</li>
+                            <li>Thermoplastiques recyclables</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="proprietes">
+                <div class="accordion">
+                    <div class="accordion-item fade-in">
+                        <div class="accordion-header">
+                            <h4>Légèreté Exceptionnelle</h4>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Les matériaux composites peuvent être jusqu'à 70% plus légers que l'acier tout en maintenant une résistance comparable. Cette caractéristique est cruciale dans les industries aérospatiale et automobile où chaque gramme compte. La réduction de poids permet une consommation d'énergie moindre, une efficacité accrue et de meilleures performances globales.</p>
+                                <p><strong>Densité typique :</strong> 1,5-2,0 g/cm³ (comparé à 7,85 g/cm³ pour l'acier)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item fade-in">
+                        <div class="accordion-header">
+                            <h4>Résistance Mécanique Supérieure</h4>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Le rapport résistance/poids des composites avancés dépasse celui de la plupart des métaux. Les fibres de carbone, par exemple, possèdent une résistance à la traction pouvant atteindre 7 GPa, soit environ 10 fois celle de l'acier conventionnel pour un poids bien moindre.</p>
+                                <p><strong>Applications :</strong> Structures d'avions, châssis de voitures de course, équipements sportifs haute performance</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item fade-in">
+                        <div class="accordion-header">
+                            <h4>Résistance à la Corrosion</h4>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Contrairement aux métaux, les composites ne rouillent pas et résistent excellemment aux environnements chimiquement agressifs. Cette propriété les rend idéaux pour les applications marines, les infrastructures côtières et les équipements de traitement chimique.</p>
+                                <p><strong>Avantages :</strong> Maintenance réduite, durée de vie prolongée, fiabilité dans des conditions extrêmes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item fade-in">
+                        <div class="accordion-header">
+                            <h4>Anisotropie et Personnalisation</h4>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Les propriétés des composites peuvent être orientées dans des directions spécifiques selon l'agencement des fibres. Cette anisotropie permet d'optimiser les performances exactement là où elles sont nécessaires, offrant une flexibilité de conception inégalée.</p>
+                                <p><strong>Techniques :</strong> Stratification orientée, tissage multidirectionnel, hybridation de fibres</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="applications">
+                <div class="content-grid">
+                    <div class="material-card fade-in">
+                        <h4><i class="fas fa-plane"></i> Aérospatiale</h4>
+                        <p>Les composites représentent jusqu'à 50% de la structure des avions modernes.</p>
+                        <ul>
+                            <li>Fuselage et ailes d'avions</li>
+                            <li>Pales d'hélicoptères</li>
+                            <li>Structures de satellites</li>
+                            <li>Boucliers thermiques</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="material-card fade-in">
+                        <h4><i class="fas fa-car"></i> Automobile</h4>
+                        <p>L'industrie automobile adopte massivement les composites pour réduire le poids et améliorer l'efficacité énergétique.</p>
+                        <ul>
+                            <li>Carrosserie de véhicules électriques</li>
+                            <li>Châssis de voitures de sport</li>
+                            <li>Panneaux intérieurs</li>
+                            <li>Composants du moteur</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="material-card fade-in">
+                        <h4><i class="fas fa-building"></i> Construction</h4>
+                        <p>Les composites offrent des solutions innovantes pour le renforcement et la construction.</p>
+                        <ul>
+                            <li>Renforcement de structures</li>
+                            <li>Ponts et passerelles</li>
+                            <li>Façades architecturales</li>
+                            <li>Réparation de béton</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="material-card fade-in">
+                        <h4><i class="fas fa-running"></i> Sport & Loisirs</h4>
+                        <p>Les équipements sportifs haute performance utilisent largement les matériaux composites.</p>
+                        <ul>
+                            <li>Raquettes de tennis</li>
+                            <li>Vélos de compétition</li>
+                            <li>Clubs de golf</li>
+                            <li>Équipements nautiques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="avantages">
+                <div class="comparison-slider-container fade-in">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary-blue);">Analyse Avantages / Inconvénients</h3>
+                    <div class="comparison-cards">
+                        <div class="comparison-card composites">
+                            <h4><i class="fas fa-check-circle"></i> Avantages</h4>
+                            <ul class="feature-list">
+                                <li class="feature-item">
+                                    <i class="fas fa-feather"></i>
+                                    <span>Rapport résistance/poids exceptionnel</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Excellente résistance à la corrosion</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Propriétés personnalisables</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Durée de vie prolongée</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>Bonne isolation thermique</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Facilité de mise en forme</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="comparison-card minerals">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Inconvénients</h4>
+                            <ul class="feature-list">
+                                <li class="feature-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Coût de production élevé</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-wrench"></i>
+                                    <span>Réparation complexe</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-recycle"></i>
+                                    <span>Recyclage difficile</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-fire"></i>
+                                    <span>Sensibilité aux UV et à la chaleur</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-industry"></i>
+                                    <span>Processus de fabrication spécialisé</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-microscope"></i>
+                                    <span>Contrôle qualité exigeant</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mineral Materials Section -->
+    <section class="minerals-section" id="mineraux">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Les Matériaux Minéraux</h2>
+                <p class="section-description">
+                    Les matériaux minéraux sont des substances inorganiques naturelles ou synthétiques 
+                    qui constituent la base de nombreuses applications industrielles et de construction.
+                </p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="material-card fade-in">
+                    <h4><i class="fas fa-gem"></i> Céramiques</h4>
+                    <p>Matériaux inorganiques non métalliques obtenus par traitement thermique à haute température.</p>
+                    <ul>
+                        <li>Dureté exceptionnelle</li>
+                        <li>Résistance thermique extrême</li>
+                        <li>Isolation électrique</li>
+                        <li>Inertie chimique</li>
+                        <li>Applications : électronique, médical, aérospatial</li>
+                    </ul>
+                </div>
+                
+                <div class="material-card fade-in">
+                    <h4><i class="fas fa-wine-glass"></i> Verre</h4>
+                    <p>Matériau amorphe transparent obtenu par fusion de silice et d'autres composants.</p>
+                    <ul>
+                        <li>Transparence optique</li>
+                        <li>Résistance chimique</li>
+                        <li>Facilité de mise en forme</li>
+                        <li>Recyclabilité complète</li>
+                        <li>Applications : construction, optique, contenants</li>
+                    </ul>
+                </div>
+                
+                <div class="material-card fade-in">
+                    <h4><i class="fas fa-cubes"></i> Ciment & Béton</h4>
+                    <p>Liants hydrauliques essentiels à la construction moderne.</p>
+                    <ul>
+                        <li>Résistance à la compression élevée</li>
+                        <li>Durabilité exceptionnelle</li>
+                        <li>Coût économique</li>
+                        <li>Versatilité d'application</li>
+                        <li>Applications : infrastructure, bâtiments, ouvrages d'art</li>
+                    </ul>
+                </div>
+                
+                <div class="material-card fade-in">
+                    <h4><i class="fas fa-mountain"></i> Pierres Naturelles</h4>
+                    <p>Matériaux géologiques extraits et utilisés depuis l'Antiquité.</p>
+                    <ul>
+                        <li>Esthétique naturelle unique</li>
+                        <li>Durabilité millénaire</li>
+                        <li>Résistance mécanique variable</li>
+                        <li>Isolation thermique</li>
+                        <li>Applications : construction, décoration, monuments</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="accordion" style="margin-top: 3rem;">
+                <div class="accordion-item fade-in">
+                    <div class="accordion-header">
+                        <h4>Propriétés Thermiques des Matériaux Minéraux</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Les matériaux minéraux excellent dans leur capacité à résister à des températures extrêmes. Les céramiques techniques peuvent maintenir leur intégrité structurelle au-delà de 2000°C, ce qui les rend indispensables dans les applications de haute température comme les boucliers thermiques, les revêtements de fours industriels et les composants de turbines.</p>
+                            <p><strong>Points de fusion typiques :</strong></p>
+                            <ul>
+                                <li>Alumine (Al₂O₃) : 2072°C</li>
+                                <li>Carbure de silicium (SiC) : 2730°C</li>
+                                <li>Zircone (ZrO₂) : 2715°C</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item fade-in">
+                    <div class="accordion-header">
+                        <h4>Dureté et Résistance à l'Usure</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Les céramiques techniques figurent parmi les matériaux les plus durs connus après le diamant. Cette dureté exceptionnelle se traduit par une résistance à l'abrasion inégalée, essentielle pour les outils de coupe, les roulements et les composants soumis à des frottements intenses.</p>
+                            <p><strong>Échelle de dureté Mohs :</strong> Les céramiques avancées atteignent 8-9,5, comparé à 4-7 pour les métaux et 5-8 pour le verre.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item fade-in">
+                    <div class="accordion-header">
+                        <h4>Applications Électroniques et Électriques</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Les propriétés diélectriques des céramiques en font des matériaux essentiels pour l'électronique. Ils servent d'isolants dans les condensateurs, les circuits intégrés et les systèmes haute tension. Certaines céramiques piézoélectriques peuvent convertir l'énergie mécanique en électricité et vice-versa.</p>
+                            <p><strong>Applications :</strong> Condensateurs multicouches, substrats de circuits imprimés, capteurs piézoélectriques, isolateurs haute tension</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item fade-in">
+                    <div class="accordion-header">
+                        <h4>Durabilité et Impact Environnemental</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Les matériaux minéraux offrent une durabilité exceptionnelle, souvent mesurée en décennies ou en siècles. Le béton romain existe toujours après 2000 ans. Cette longévité réduit la nécessité de remplacement et contribue à la durabilité environnementale. Cependant, la production de ciment est responsable de 8% des émissions mondiales de CO₂, stimulant la recherche de alternatives plus écologiques.</p>
+                            <p><strong>Innovations :</strong> Ciments à faible teneur en carbone, béton recyclé, géopolymères</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparison-table fade-in">
+                <h3 style="padding: 2rem; text-align: center; background: var(--light-gray); margin: 0;">Tableau Comparatif des Matériaux Minéraux</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matériau</th>
+                            <th>Densité (g/cm³)</th>
+                            <th>Résistance (MPa)</th>
+                            <th>T° Max (°C)</th>
+                            <th>Applications Principales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Céramique Alumine</td>
+                            <td>3.9 - 4.0</td>
+                            <td>300 - 400</td>
+                            <td>1800</td>
+                            <td>Électronique, médical, aérospatial</td>
+                        </tr>
+                        <tr>
+                            <td>Verre Sodocalcique</td>
+                            <td>2.5</td>
+                            <td>50 - 90</td>
+                            <td>600</td>
+                            <td>Fenêtres, contenants, mobilier</td>
+                        </tr>
+                        <tr>
+                            <td>Béton Armé</td>
+                            <td>2.4</td>
+                            <td>30 - 50</td>
+                            <td>300</td>
+                            <td>Construction, infrastructure</td>
+                        </tr>
+                        <tr>
+                            <td>Granite</td>
+                            <td>2.6 - 2.7</td>
+                            <td>100 - 250</td>
+                            <td>1200</td>
+                            <td>Construction, décoration</td>
+                        </tr>
+                        <tr>
+                            <td>Carbure de Silicium</td>
+                            <td>3.2</td>
+                            <td>350 - 580</td>
+                            <td>2700</td>
+                            <td>Abrasifs, blindage, électronique</td>
+                        </tr>
+                        <tr>
+                            <td>Porcelaine</td>
+                            <td>2.4</td>
+                            <td>200 - 300</td>
+                            <td>1400</td>
+                            <td>Vaisselle, isolateurs électriques</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comparison Section -->
+    <section class="comparison-section" id="comparaison">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Comparaison et Applications Modernes</h2>
+                <p class="section-description">
+                    Une analyse comparative des matériaux composites et minéraux révèle leurs forces 
+                    respectives et leurs applications complémentaires dans l'ingénierie moderne.
+                </p>
+            </div>
+            
+            <div class="comparison-slider-container fade-in">
+                <div class="comparison-cards">
+                    <div class="comparison-card composites">
+                        <h4>Matériaux Composites</h4>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-feather"></i>
+                                <span><strong>Densité :</strong> 1.5 - 2.0 g/cm³</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span><strong>Résistance :</strong> Très élevée (rapport résistance/poids)</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-thermometer-half"></i>
+                                <span><strong>T° Max :</strong> 150-300°C (polymères), jusqu'à 1500°C (céramiques)</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span><strong>Coût :</strong> Élevé à très élevé</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-tools"></i>
+                                <span><strong>Fabrication :</strong> Complexe, nécessite expertise</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-recycle"></i>
+                                <span><strong>Recyclage :</strong> Difficile mais en développement</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-card minerals">
+                        <h4>Matériaux Minéraux</h4>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-weight-hanging"></i>
+                                <span><strong>Densité :</strong> 2.4 - 4.0 g/cm³</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-mountain"></i>
+                                <span><strong>Résistance :</strong> Compression excellente, traction faible</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-fire"></i>
+                                <span><strong>T° Max :</strong> 1500-2700°C</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-hand-holding-usd"></i>
+                                <span><strong>Coût :</strong> Faible à modéré</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-industry"></i>
+                                <span><strong>Fabrication :</strong> Bien établie, accessible</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <span><strong>Recyclage :</strong> Excellent (verre, béton)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="intro-grid" style="margin-top: 4rem;">
+                <div class="intro-card fade-in">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Innovations Futures</h3>
+                    <p>Les nano-composites, les matériaux intelligents auto-réparants et les céramiques ultra-haute température ouvrent de nouvelles frontières. Les recherches visent à combiner les avantages des deux catégories pour créer des matériaux hybrides aux performances exceptionnelles.</p>
+                </div>
+                
+                <div class="intro-card fade-in">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Durabilité</h3>
+                    <p>L'accent croissant sur la durabilité environnementale stimule le développement de composites bio-sourcés, de ciments à faible empreinte carbone et de procédés de recyclage améliorés. L'économie circulaire devient un objectif central dans la science des matériaux.</p>
+                </div>
+                
+                <div class="intro-card fade-in">
+                    <i class="fas fa-brain"></i>
+                    <h3>Matériaux Intelligents</h3>
+                    <p>L'intégration de capteurs, d'actionneurs et de capacités de traitement dans les matériaux eux-mêmes crée de nouvelles possibilités. Les structures auto-diagnostiques et auto-adaptatives représentent l'avenir de l'ingénierie des matériaux.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="galerie">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Galerie d'Applications</h2>
+                <p class="section-description">
+                    Découvrez les applications concrètes des matériaux composites et minéraux 
+                    dans diverses industries et domaines technologiques.
+                </p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Aéronautique</h4>
+                        <p>Fuselage en composite carbone - Boeing 787 Dreamliner utilise 50% de composites pour réduire le poids et améliorer l'efficacité énergétique.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Automobile</h4>
+                        <p>Châssis en fibre de carbone - Les supercars modernes utilisent des monocoques composites pour allier légèreté et sécurité maximale.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-bridge"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Génie Civil</h4>
+                        <p>Ponts en béton précontraint - Les matériaux minéraux forment l'épine dorsale de l'infrastructure mondiale avec une durabilité exceptionnelle.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Énergies Renouvelables</h4>
+                        <p>Pales d'éoliennes - Composites en fibre de verre renforcés permettent des pales de plus de 80 mètres de long pour maximiser la capture d'énergie.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Électronique</h4>
+                        <p>Substrats en céramique - Les matériaux minéraux isolants sont essentiels pour les circuits intégrés et les composants haute performance.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Médical</h4>
+                        <p>Implants en céramique biocompatible - L'alumine et la zircone offrent une excellente biocompatibilité pour les prothèses articulaires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À Propos</h3>
+                <p>Ce site web présente une exploration complète des matériaux composites et minéraux, leurs propriétés, applications et importance dans l'ingénierie moderne.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#accueil"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="#introduction"><i class="fas fa-info-circle"></i> Introduction</a></li>
+                    <li><a href="#composites"><i class="fas fa-layer-group"></i> Composites</a></li>
+                    <li><a href="#mineraux"><i class="fas fa-gem"></i> Minéraux</a></li>
+                    <li><a href="#comparaison"><i class="fas fa-balance-scale"></i> Comparaison</a></li>
+                    <li><a href="#galerie"><i class="fas fa-images"></i> Galerie</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Équipe de Réalisation</h3>
+                <p style="margin-bottom: 1rem;">Ce projet est réalisé par :</p>
+                <div class="team-members">
+                    <div class="team-member"><i class="fas fa-user"></i> Med Aymen Trousi</div>
+                    <div class="team-member"><i class="fas fa-user"></i> Yosr Hadj Kacem</div>
+                    <div class="team-member"><i class="fas fa-user"></i> Mohamed Ammous</div>
+                    <div class="team-member"><i class="fas fa-user"></i> Noue El Islam Sallem</div>
+                    <div class="team-member"><i class="fas fa-user"></i> Med Aziz Mbarki</div>
+                    <div class="team-member"><i class="fas fa-user"></i> Med Hedi Hadji</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Matériaux Composites et Minéraux. Tous droits réservés. | Conçu pour l'excellence académique.</p>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // ================================
+        // Navigation & Mobile Menu
+        // ================================
+        const navbar = document.getElementById('navbar');
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Mobile menu toggle
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = navToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // ================================
+        // Loading Screen
+        // ================================
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loadingScreen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 1000);
+        });
+        
+        // ================================
+        // Tabs Functionality
+        // ================================
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+        
+        // ================================
+        // Accordion Functionality
+        // ================================
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                const accordionContent = accordionItem.querySelector('.accordion-content');
+                const isActive = accordionItem.classList.contains('active');
+                
+                // Close all accordion items
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.accordion-content').style.maxHeight = null;
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                }
+            });
+        });
+        
+        // ================================
+        // Scroll Animations
+        // ================================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+        
+        // ================================
+        // Back to Top Button
+        // ================================
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // ================================
+        // Smooth Scroll for Navigation Links
+        // ================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // ================================
+        // Active Navigation Link on Scroll
+        // ================================
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // ================================
+        // Gallery Lightbox (Simple Implementation)
+        // ================================
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const overlay = item.querySelector('.gallery-overlay');
+                const title = overlay.querySelector('h4').textContent;
+                const description = overlay.querySelector('p').textContent;
+                
+                // Simple alert for demonstration (could be replaced with a modal)
+                alert(`${title}\n\n${description}`);
+            });
+        });
+        
+        // ================================
+        // Dynamic Year in Footer
+        // ================================
+        const currentYear = new Date().getFullYear();
+        document.querySelector('.footer-bottom p').textContent = 
+            document.querySelector('.footer-bottom p').textContent.replace('2026', currentYear);
+        
+        // ================================
+        // Performance: Lazy Loading Images
+        // ================================
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+        
+        // ================================
+        // Keyboard Navigation
+        // ================================
+        document.addEventListener('keydown', (e) => {
+            // Escape key closes mobile menu
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // ================================
+        // Console Message
+        // ================================
+        console.log('%c🔬 Matériaux Composites et Minéraux', 'color: #3ba99c; font-size: 20px; font-weight: bold;');
+        console.log('%cSite web développé avec passion pour l\'excellence académique', 'color: #2c4a6f; font-size: 12px;');
+        console.log('%c👥 Équipe: Med Aymen Trousi, Yosr Hadj Kacem, Mohamed Ammous, Noue El Islam Sallem, Med Aziz Mbarki, Med Hedi Hadji', 'color: #8b95a5; font-size: 10px;');
+    </script>
+    
+    <!--
+    ================================
+    DEPLOYMENT INSTRUCTIONS
+    ================================
+    
+    GitHub Pages Deployment:
+    
+    1. Create a new repository on GitHub
+    2. Upload this HTML file to the repository
+    3. Rename the file to "index.html"
+    4. Go to repository Settings > Pages
+    5. Select the main branch as the source
+    6. Save and wait for deployment (usually 2-5 minutes)
+    7. Your site will be live at: https://yourusername.github.io/repository-name/
+    
+    Alternative: Direct File Usage:
+    - This file can be opened directly in any modern web browser
+    - All resources are loaded from CDNs (Google Fonts, Font Awesome)
+    - No build process or server required
+    - Works offline after initial resource loading
+    
+    Customization Tips:
+    - Adjust colors in CSS variables at the top of <style> section
+    - Modify content sections directly in the HTML
+    - Add custom images by replacing gallery placeholders
+    - Extend functionality by adding more JavaScript at the bottom
+    
+    Performance Optimization:
+    - All CSS and JS are embedded (single HTTP request)
+    - Uses modern CSS features for smooth animations
+    - Implements lazy loading for images
+    - Optimized for Core Web Vitals
+    
+    Browser Compatibility:
+    - Chrome/Edge: Full support
+    - Firefox: Full support
+    - Safari: Full support
+    - Mobile browsers: Fully responsive
+    
+    ================================
+    -->
+</body>
+</html>
